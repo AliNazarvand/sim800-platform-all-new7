@@ -31,10 +31,10 @@ text
 
 | File | Purpose | Rows |
 |---|---|---|
-| `A_Project_Backlog.csv` | Software engineering tasks | 45 |
-| `B_Data_Product_Catalog.csv` | Data products extracted from PDFs | 18 |
-| `A_Project_Dependencies.csv` | Backlog dependency junction table | 50 |
-| `B_Data_Product_Dependencies.csv` | Data-product dependency junction table | 18 |
+| `A_Project_Backlog.csv` | Software engineering tasks | 10 |
+| `B_Data_Product_Catalog.csv` | Data products extracted from PDFs | 4 |
+| `A_Project_Dependencies.csv` | Backlog dependency junction table | 12 |
+| `B_Data_Product_Dependencies.csv` | Data-product dependency junction table | 4 |
 
 See `docs/PLANNING.md` for column-by-column reference.
 
@@ -65,7 +65,7 @@ See `docs/PLANNING.md` for column-by-column reference.
 5. **Bulk generation** — via script or semi-manual.
 6. **Validation** — JSON Schema + consistency tests.
 
-**Minimum goal for the first week:** 50 records in `commands.jsonl`.
+**Minimum target was 50 records; current dataset contains 357 command records.**
 
 See `docs/EXTRACTION.md` for the full process.
 
@@ -98,7 +98,7 @@ text
 - ✅ 18 JSON Schemas defined under `data/schemas/`
 - ✅ Git repository initialized with a clean history
 - ✅ Dev infrastructure in place (pyproject, pre-commit, CI)
-- ⏳ Awaiting the start of data extraction
+- ✅ Data extraction complete — 357 command records, 255 error codes, 43 deprecation candidates, 1095 version-matrix rows. All QA Gates PASS. Release v0.1.0 packaged.
 
 **From this point forward: data only.**
 
