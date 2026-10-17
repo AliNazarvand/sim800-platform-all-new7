@@ -23,7 +23,7 @@ Implementation complete for local build v0.1.0. No remote is configured and no p
 - Datasheets: 13 discovered; 3 AT manuals, 10 hardware designs; encrypted files were not decrypted.
 - Products: commands 357, deprecated command candidates 43, error codes 255 (128 CME + 127 CMS), command-version rows 1095, spot-check reports 13.
 - Test status: 34 passing tests, including 32 unit tests; coverage 97.70%.
-- License alignment: project code and schemas use the MIT License; SimCom PDF ownership remains external. The redundant `other/` directory was absent from the active repository and no duplicate tree remains.
+- License alignment: project code and schemas use the MIT License; SimCom PDF ownership remains external. The `other/` directory is a local staging area intended for external AI processing and is intentionally excluded from the final release artifacts.
 - Great Expectations: `commands_checkpoint` passed against `dataset/commands.jsonl`; evidence is recorded in `data/validation/great_expectations_report.md`.
 
 ## Final QA Gate Status (2026-10-18)
