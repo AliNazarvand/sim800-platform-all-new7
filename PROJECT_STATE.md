@@ -13,7 +13,7 @@ Implementation complete for local build v0.1.0. No remote is configured and no p
 | 5 | T-005 | QA, documentation and packaging | Done |
 
 ## Memory Bank
-- Completed: package migration to underscore names, driver, adapter, validator, diff engine, CLI, schemas, planning DAG, multi-version extraction, QA reports, per-PDF spot checks and release packaging.
+- Completed: package migration to underscore names, driver, adapter, validator, diff engine, CLI, schemas, planning DAG, multi-version extraction, QA reports, per-PDF spot checks, Great Expectations checkpoint validation and release packaging.
 - Key decision: `jsonschema` is the validation library; see `docs/adr/ADR-001-validation-library-choice.md`.
 - Assumptions: MIT is used for project code and schemas; source PDF license remains SimCom-owned.
 - Open questions: removed command identifiers are recorded as deprecation candidates and retain an explicit row-level confirmation note; semantic replacements are not inferred.
@@ -23,6 +23,8 @@ Implementation complete for local build v0.1.0. No remote is configured and no p
 - Datasheets: 13 discovered; 3 AT manuals, 10 hardware designs; encrypted files were not decrypted.
 - Products: commands 357, deprecated command candidates 43, error codes 255 (128 CME + 127 CMS), command-version rows 1095, spot-check reports 13.
 - Test status: 34 passing tests, including 32 unit tests; coverage 97.70%.
+- License alignment: project code and schemas use the MIT License; SimCom PDF ownership remains external. The redundant `other/` directory was absent from the active repository and no duplicate tree remains.
+- Great Expectations: `commands_checkpoint` passed against `dataset/commands.jsonl`; evidence is recorded in `data/validation/great_expectations_report.md`.
 
 ## Final QA Gate Status (2026-10-18)
 
@@ -36,7 +38,7 @@ Implementation complete for local build v0.1.0. No remote is configured and no p
 | License Compliance | PASS | data/validation/gate_license_compliance.json |
 | License Compatibility | PASS | data/validation/gate_license_compatibility.json |
 
-Final commands: `pytest --cov=src` passed with 34 tests and 97.70% coverage; `mypy src/`, `ruff check .`, and `pre-commit run --all-files` all passed. Cumulative platform credit telemetry remains unavailable; no credit number is inferred or fabricated.
+Final commands: `pytest --cov=src` passed with 34 tests and 97.70% coverage; `mypy src/`, `ruff check .`, and `pre-commit run --all-files` all passed. Great Expectations `commands_checkpoint` also passed. Cumulative platform credit telemetry remains unavailable; no credit number is inferred or fabricated.
 
 ## Credit Estimate
 

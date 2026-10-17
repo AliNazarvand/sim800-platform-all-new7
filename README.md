@@ -85,7 +85,7 @@ text
 
 ## License
 
-- **Code and schemas:** GPLv3
+- **Code and schemas:** MIT License
 - **PDF content:** owned by SimCom
 - **Extracted dataset:** until the license status of the PDFs is determined, keep it in a **private repository**.
 - **What can be published publicly:** schema, tooling, and extraction scripts — not the extracted content.

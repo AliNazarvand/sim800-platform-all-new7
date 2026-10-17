@@ -1,0 +1,134 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {
+        "default_identifier": "commands"
+      },
+      "batch_spec_passthrough": {
+        "reader_method": "read_json",
+        "reader_options": {
+          "lines": true
+        }
+      },
+      "data_asset_name": "commands",
+      "data_connector_name": "runtime_data_connector",
+      "datasource_name": "pandas_runtime"
+    },
+    "batch_markers": {
+      "ge_load_time": "20261017T222127.878923Z",
+      "pandas_data_fingerprint": "fc947a4a4eed93f1e3edf54decb11e0c"
+    },
+    "batch_spec": {
+      "data_asset_name": "commands",
+      "path": "dataset/commands.jsonl",
+      "reader_method": "read_json",
+      "reader_options": {
+        "lines": true
+      }
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "commands_checkpoint",
+    "expectation_suite_name": "commands_suite",
+    "great_expectations_version": "0.18.21",
+    "run_id": {
+      "run_name": "20261017-222127-commands",
+      "run_time": "2026-10-17T22:21:27.875879+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20261017T222127.890578Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_row_count_to_be_between",
+        "kwargs": {
+          "batch_id": "e2627cd90033e1294cf362c57e98aa27",
+          "min_value": 50
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 357
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_to_exist",
+        "kwargs": {
+          "batch_id": "e2627cd90033e1294cf362c57e98aa27",
+          "column": "command"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {},
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "e2627cd90033e1294cf362c57e98aa27",
+          "column": "command"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 357,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "e2627cd90033e1294cf362c57e98aa27",
+          "column": "command",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "str"
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 4,
+    "success_percent": 100.0,
+    "successful_expectations": 4,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}
